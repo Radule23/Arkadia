@@ -1,0 +1,143 @@
+/* Reset i osnovni font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5faff;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+}
+
+/* Bočna navigacija */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #0077cc;
+    color: white;
+    padding: 20px;
+    border-right: 2px solid #0059b3;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar nav a:hover {
+    color: #ffdd57;
+}
+
+/* Glavni sadržaj */
+main {
+    margin-left: 240px;
+    padding: 20px;
+    flex: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Sekcije */
+section {
+    background-color: #e6f2ff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+section.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    margin-bottom: 12px;
+    color: #0059b3;
+}
+
+/* Liste */
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #0077cc;
+    color: white;
+    border-radius: 8px;
+}
+
+/* Dugme za vrh */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: none;
+    transition: background-color 0.3s;
+}
+
+#topBtn:hover {
+    background-color: #0059b3;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        margin-left: 0;
+    }
+}
